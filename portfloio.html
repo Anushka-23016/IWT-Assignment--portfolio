@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Yadav | Personal Website</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* COLOR THEME */
+        :root {
+            --yellow: #ffde59;
+            --pink: #ff66c4;
+            --blue: #5ce1e6;
+            --green: #7ed957;
+            --dark: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--dark);
+            z-index: 1000;
+        }
+
+        nav .logo { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: bold;
+            margin-left: 15px;
+            padding: 5px 10px;
+        }
+
+        /* BASIC SECTION LAYOUT */
+        section {
+            padding: 100px 10%;
+            min-height: 100vh;
+            border-bottom: 4px solid var(--dark);
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* 1. INTRO (Yellow) */
+        #home {
+            background-color: var(--yellow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            /* MOVES IMAGE DOWN: Adjust the 20% to move head further down */
+            object-position: center 20%; 
+            background: white;
+        }
+
+        #home h1 { font-size: 4rem; margin-bottom: 10px; line-height: 1; }
+        .badge { background: white; padding: 5px 15px; border: 3px solid var(--dark); font-weight: bold; font-size: 1.2rem; }
+
+        /* 2. ACADEMICS (Pink) */
+        #academics { background-color: var(--pink); color: white; }
+        
+        .college-box {
+            background: white;
+            color: var(--dark);
+            padding: 30px;
+            border: 4px solid var(--dark);
+            box-shadow: 12px 12px 0px var(--dark);
+            margin-bottom: 40px;
+        }
+
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: var(--dark);
+            border: 4px solid var(--dark);
+        }
+
+        .marks-table th, .marks-table td {
+            padding: 15px;
+            border: 2px solid var(--dark);
+            text-align: left;
+        }
+
+        .marks-table th { background: var(--blue); }
+
+        /* 3. PROJECTS (Blue) */
+        #projects { background-color: var(--blue); }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border: 4px solid var(--dark);
+            box-shadow: 10px 10px 0px var(--dark);
+            margin-bottom: 30px;
+        }
+
+        /* 4. HOBBIES (Green) */
+        #hobbies { background-color: var(--green); }
+
+        .list-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .list-box {
+            background: white;
+            padding: 30px;
+            border: 4px solid var(--dark);
+        }
+
+        ul { list-style: square; margin-left: 20px; margin-top: 10px; }
+        ul li { padding: 5px 0; }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .list-container { grid-template-columns: 1fr; }
+            #home h1 { font-size: 2.8rem; }
+            section { padding: 80px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PortFolio</div>
+        <div>
+            <a href="#home">Intro</a>
+            <a href="#academics">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#hobbies">Extras</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <img src="portfolio1.jpeg" alt="Anushka Yadav" class="profile-img">
+        <h1>Hi, I'm <br>Anushka Yadav</h1>
+        <p class="badge">Developer | Athlete | Maker</p>
+    </section>
+
+    <section id="academics">
+        <h2>Education</h2>
+        
+        <div class="college-box">
+            <h3 style="color: var(--pink); font-size: 1.8rem;">Banasthali Vidyapeeth</h3>
+            <hr style="margin: 15px 0; border: 1px solid var(--dark);">
+            <p><strong>Branch:</strong> IT (Information Technology)</p>
+            <p><strong>Current CGPA:</strong> 8.6</p>
+            <p><strong>Location:</strong> Tonk, Rajasthan</p>
+        </div>
+
+        <h3>Schooling</h3>
+        <table class="marks-table">
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12th Grade</td>
+                    <td>St Anjela Sophia school, jaipur</td>
+                    <td>2022</td>
+                    <td>84%</td>
+                </tr>
+                <tr>
+                    <td>10th Grade</td>
+                    <td>St Anjela Sophia school, jaipur</td>
+                    <td>2020</td>
+                    <td>94%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Smart fire dispatch system</h3>
+            <p>A MERN project with ML integration to help fire stations in quick decision making and resource allocation.</p>
+        </div>
+        <div class="project-card">
+            <h3>Vision guard</h3>
+            <p>A Flutter and ML-kit app that helps users maintain a safe distance between the mobile screen and their eyes.</p>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Beyond the Books</h2>
+        <div class="list-container">
+            <div class="list-box">
+                <h3 style="border-bottom: 2px solid var(--dark);">Hobbies</h3>
+                <ul>
+                    <li>Crocheting</li>
+                    <li>Art and craft</li>
+                    <li>Running</li>
+                    <li>Gym</li>
+                </ul>
+            </div>
+            <div class="list-box">
+                <h3 style="border-bottom: 2px solid var(--dark);">Co-Curriculars</h3>
+                <ul>
+                    <li>Mayukh 2025 Champions</li>
+                    <li>Hack Celestia Top 20 Team</li>
+                    <li>Swimming</li>
+                    <li>Athletics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built by Anushka Yadav | Assignment-2 | 2026</p>
+    </footer>
+
+</body>
+</html>
